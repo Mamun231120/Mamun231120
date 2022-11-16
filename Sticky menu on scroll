@@ -1,0 +1,39 @@
+<header>
+  <div class="logo">OLD, OUTDATED STICKY MENU METHOD</div>
+  <div class="intro">Our company is crap! Don't buy our stuff!</div>
+  <div class="menu">Menu goes here - home - links - blah blah</div>
+</header>
+
+<div class="content">Main Content Goes here</div>
+--------------------------------------------------------------------
+.menu-padding {padding-top:40px;}
+.sticky {position:fixed; top:0;}
+--------------------------------------------------------------------
+$(document).ready(function(){
+  
+var menu = document.querySelector('.menu');
+var origTopCoordinateMenu = menu.offsetTop;
+
+
+function scroll () {
+  if ($(window).scrollTop() >= origTopCoordinateMenu) {
+    $('.menu').addClass('sticky');
+    $('.content').addClass('menu-padding');
+  } else {
+    $('.menu').removeClass('sticky');
+    $('.content').removeClass('menu-padding');
+  }  
+  
+  
+}
+
+document.onscroll = scroll;
+
+});
+
+=============================
+Other Source
+-----------------
+https://scrollmagic.io/
+https://codepen.io/JGallardo/pen/lJoyk
+https://codepen.io/dominium/pen/GmjKyr
