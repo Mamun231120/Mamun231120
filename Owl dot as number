@@ -1,0 +1,53 @@
+<div class="owl-carousel owl-theme">
+    <div class="item" data-dot="<span>1</span>">Content Goes Here</div>
+    <div class="item" data-dot="<span>2</span>">Content Goes Here</div>
+    <div class="item" data-dot="<span>3</span>">Content Goes Here</div>
+</div>
+
+-------JS-----------
+Owl function
+dots: true,
+dotsData:true,
+
+------------CSS-----------------
+.our-partners .owl-dots .owl-dot span{
+	width: 40px;
+	height: 40px;
+	padding: 0 5px;
+	margin: 5px 2px;
+	background: transparent;
+	color: #000;
+	border: 1px solid red;
+	border-radius: 50%;
+	position: relative;
+	margin-right: 100px;
+	line-height: 40px;
+}
+
+
+.our-partners .owl-dots .owl-dot span{
+	margin-right: 100px;
+}
+
+.our-partners .owl-dots .owl-dot{
+	position: relative;
+}
+
+.our-partners .owl-dots .owl-dot:after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: red;
+  display: inline-block;
+  position: absolute;
+  top: 25px;
+  margin-top: -1px;
+  left: 61px;
+  transition: all 0.7s cubic-bezier(0, 0, 0.2, 1);
+  margin-right: 10px
+}
+
+.our-partners .owl-dots .owl-dot:last-child:after,
+.our-partners .owl-dots .owl-dot:last-child:before {
+  display: none;
+}
